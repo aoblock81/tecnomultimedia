@@ -55,7 +55,7 @@ void dibujaArcoiris() {
 
 void obturador() { 
   for (int x=-720; x<720; x+=4) {                       ///////////////////////////obturador
-    // redondeo y evita smooth
+   
 
 
     fill(0);
