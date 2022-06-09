@@ -3,6 +3,7 @@
 // Prof. Garay Leonardo - Tobías Albirosa
 // Alejandro Block - Leg. 41126/7
 //
+// https://youtu.be/aujd64OBHIA
 //
 
 color celeste= (#0193D8);
@@ -17,13 +18,12 @@ int radio = 93;
 float x=0;
 float y=0;
 float rampa;
-float mov = ceil(map(mouseX, 0, width, 0, 12));
+
 
 void setup() {
   size(720, 420); 
   noStroke();
   smooth();
-  surface.setResizable(true);
   img1 = loadImage("gato.png");
 }
 
@@ -55,7 +55,7 @@ void draw() {
 
 void mouseMoved() {
   activa = false;
-  rampa = ceil(map(mouseX, 0, width, 0, 12));
+  rampa = ceil(map(mouseX, 0, width, 0, 12));    // redondeo y evita smooth
 }
 void mouseDragged() {
   activa = true;
