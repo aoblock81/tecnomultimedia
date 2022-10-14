@@ -9,7 +9,7 @@ class Boca {
 
   void dibujar() {
     boca = loadImage("b" + varianteBoca + ".png");
-    image(boca, width/3, height/3+50, 150, 150);  //cargo la imagen
+    image(boca, width/3+15, 260, 150, 150);  //cargo la imagen
   }
 
 

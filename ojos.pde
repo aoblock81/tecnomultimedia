@@ -9,7 +9,7 @@ class Ojo {
 
   void dibujar() {
     ojo = loadImage("o" + varianteOjo + ".png");
-    image(ojo, width/3, height/3+20, 150, 150);
+    image(ojo, width/3, 200, 150, 150);
   }
 
 

@@ -4,21 +4,18 @@ class Escenario {
   int varianteOjo;
   int varianteBoca; 
   PFont font;
-
+  PImage bg;
 
   Escenario() {
     papa = new Papa(varianteOjo, varianteBoca);
   }
 
   void dibujar() {
-
-    fill(200);
+    bg = loadImage("bg.png");
+    image(bg, 0, 0, 500, 700); 
     font = loadFont("ClarksSummit-18.vlw");
-    textFont(font, 32);
+
     textAlign(CENTER);
-    fill(0, 200, 0);
-    textSize(32);
-    text("Cara de Papa MUTANTE", width/2, 50);
     fill(150);
     textSize(18);
     text("Cambia Ojos", width/2, 100);
@@ -26,7 +23,7 @@ class Escenario {
     fill(200);
     text("mouse click / Left and Right", width/2, 120);
     text("mouse click / Left and Right", width/2, height-30);
-    line (0, height/2, width, height/2);
+
     
     papa.dibujar();
   }

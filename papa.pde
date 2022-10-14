@@ -15,7 +15,7 @@ class Papa {
 
   void dibujar() {
     cuerpo = loadImage("papa.png");
-    image(cuerpo, 0, 0, 500, 500);   // dibuja cuerpo de papa
+    image(cuerpo, 0, 0, 500, 700);   // dibuja cuerpo de papa
     ojo.dibujar();
     boca.dibujar();
   }

@@ -10,7 +10,7 @@ Escenario escenario;                     //declaro el objeto Escenario
 
 
 void setup() {
-  size(500, 500);
+  size(500, 700);
   escenario = new Escenario();          //contruye el objeto Escenario
 } 
 
