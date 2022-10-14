@@ -18,10 +18,8 @@ class Escenario {
     textAlign(CENTER);
     fill(150);
     textSize(18);
-    text("Cambia Ojos", width/2, 100);
-    text("Cambia Boca", width/2, height-50);
+    text("Cambia Ojos & Boca", width/2, height-50);
     fill(200);
-    text("mouse click / Left and Right", width/2, 120);
     text("mouse click / Left and Right", width/2, height-30);
 
     
