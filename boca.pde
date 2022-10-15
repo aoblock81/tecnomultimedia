@@ -14,14 +14,14 @@ class Boca {
 
 
   void mousePresionado() {
-    if (mouseButton == LEFT && mouseY >= height/2) {
+    if (mouseButton == LEFT && mouseY > 280) {
       if (varianteBoca == 9) {
         varianteBoca = 1;
       } else {
         varianteBoca += 1;
       }
     }
-    if (mouseButton == RIGHT && mouseY >= height/2) {
+    if (mouseButton == RIGHT && mouseY > 280) {
       if (varianteBoca == 1) {
         varianteBoca = 9;
       } else {
