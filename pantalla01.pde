@@ -8,8 +8,7 @@ class Pantalla01 {
 
   PFont font = loadFont("04b30-36.vlw");
   color player;
-  String conteo;
-  boolean cuentaRegresiva=true;
+
 
   Pantalla01 () {
   }
@@ -35,7 +34,6 @@ class Pantalla01 {
 
 
   void activar() {
-    println("A1");
     activa = true;
   }
 
@@ -75,30 +73,4 @@ class Pantalla01 {
     }
   }
 
-
-  void cuentaRegresiva() {
-
-    int tiempo = millis(); 
-    println(tiempo);
-
-    if (tiempo > 4000) {
-      cuentaRegresiva = false;
-    } else if (tiempo > 4000) {
-
-      conteo="0";
-    } else if (tiempo > 3000) {
-
-      conteo="1";
-    } else if (tiempo > 2000) {
-
-      conteo="2";
-    } else if (tiempo > 1000) {
-
-      conteo="3";
-    } 
-
-    textSize(150);
-    text (conteo, width/2, height/2);
-    println(conteo);
-  }
 }

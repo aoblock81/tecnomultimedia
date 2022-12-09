@@ -55,6 +55,7 @@ class Pantalla02 {
 
     if (botonVolver.click==true) {
       desactivar();
+      botonVolver.desactivar();
       pantalla00.activar();
     }
   }

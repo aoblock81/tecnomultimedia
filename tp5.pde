@@ -3,11 +3,11 @@ import ddf.minim.*;
 // Comisión 4 
 // Prof. Garay Leonardo 
 // Alejandro Block - Leg. 41126/7
-// video: 
+// video: https://youtu.be/dBr7cePg6kU
 
 
 import ddf.minim.analysis.*;
-Principal principal;  //declaro el objeto Juego
+Principal principal;  //declaro el objeto Principal
 
 
 Minim minim;
