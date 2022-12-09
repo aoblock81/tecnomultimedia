@@ -1,5 +1,6 @@
 class Comida {
   Tablero tablero;
+  Obstaculo[]obstaculos;
   int posX;
   int posY;
   int anchoCelda;   //remplazar por imagen
@@ -21,11 +22,12 @@ class Comida {
 
 
 
-  Comida (Tablero _tablero ) {
+  Comida (Tablero _tablero, Obstaculo []_obstaculos ) {
     tablero =_tablero;
     posX =_tablero.columnas;
     posY =_tablero.filas;
     anchoCelda =_tablero.anchoCelda;
+    obstaculos = _obstaculos; 
 
     nuevaPosicion();
   }
@@ -40,6 +42,13 @@ class Comida {
   void nuevaPosicion() {
     posX = int(random(0, tablero.columnas-1));
     posY = int(random(0, tablero.filas-1));
+    
+    for (int i = 0; i<obstaculos.length; i++) {  
+      if (posX == obstaculos[i].posX.get(0) && posY == obstaculos[i].posY.get(0)) {
+        posX = int(random(0, tablero.columnas-1));
+        posY = int(random(0, tablero.filas-1));
+      }
+    }
   }
 
   void restart() {

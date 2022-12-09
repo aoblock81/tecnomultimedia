@@ -2,8 +2,8 @@ class Juego {
   Tablero tablero;
   Pantalla03 pantalla03;   /// pantalla GANO
   Pantalla04 pantalla04;   // pantalla PERDIO
-  Comida comida;
   Obstaculo[]obstaculos = new Obstaculo[20];
+  Comida comida;
   Vibora vibora;
   color player;
   boolean activo = false;
@@ -12,11 +12,10 @@ class Juego {
   Juego () {
 
     tablero = new Tablero(24, 43, 15);
-    comida = new Comida (tablero);    
     for (int i=0; i<obstaculos.length; i++) {   
       obstaculos[i] = new Obstaculo(tablero);
     }
-    
+    comida = new Comida (tablero, obstaculos);    
     vibora = new Vibora(tablero, comida, player, obstaculos);
   }
 
@@ -31,7 +30,7 @@ class Juego {
   }
 
   void dibuja() {
-
+    noCursor();
     if (vibora.comio==true) {
       vibora.comio=false;
       comida.nuevaPosicion();
@@ -70,11 +69,14 @@ class Juego {
   void activar() {
     music01.rewind();
     music01.play();
+    puntaje = 0;
+    noCursor();
     activo = true;
   }
 
   void desactivar() {
     music01.pause();
+    cursor();
     activo = false;
   }
 
